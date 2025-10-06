@@ -1,0 +1,137 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+/* --- Fondo animado --- */
+video.bg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* --- Texto principal --- */
+.letra {
+  position: absolute;
+  top: 50%;             /* centra mejor verticalmente */
+  left: 70%;            /* centra horizontalmente */
+  transform: translate(-50%, -50%);
+  width: 145%;           /* evita que se salga del marco */
+  text-align: center;
+  font-size: 1.8em;
+  letter-spacing: 1px;
+  animation: aparecer 3s ease-in-out;
+  text-shadow: 0 0 10px rgba(255,255,255,0.8);
+  font-family: 'Times New Roman', Times, serif;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  z-index: 10;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Botón --- */
+.boton {
+  position: absolute;
+  bottom: 10%;
+  left: 20%;
+  transform: translateX(-50%);
+  background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.4);
+  padding: 15px 30px;
+  border-radius: 25px;
+  color: white;
+  font-size: 1.1em;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.boton:hover {
+  background: rgba(255,255,255,0.4);
+  transform: translateX(-50%) scale(1.05);
+}
+
+/* --- Carta --- */
+.carta {
+  display: none;
+  position: fixed;
+  top: 50%; left: 20%;
+  transform: translate(-50%, -50%) scale(0.8);
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 600px;
+  max-height: 800px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(255,255,255,0.3);
+  animation: abrir 0.6s ease forwards;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+@keyframes abrir {
+  to { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}
+
+.cerrar {
+  margin-top: 15px;
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.cerrar:hover {
+  background: rgba(255,255,255,0.4);
+}
+
+.encabezado {
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
+  animation: fadeIn 3s ease-in-out;
+}
+
+.titulo {
+  font-size: 3em;
+  margin: 0;
+  font-weight: 700;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.subtitulo {
+  font-size: 1.5em;
+  margin-top: 0.3em;
+  font-weight: 400;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.fecha {
+  font-size: 1em;
+  margin-top: 0.5em;
+  opacity: 0.8;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

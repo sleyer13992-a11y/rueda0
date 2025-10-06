@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carta especial</title>
+  <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+
+  <!-- 🎥 Fondo -->
+  <video class="bg" autoplay loop muted playsinline>
+    <source src="/public/paisaje.mp4" type="video/mp4">
+  </video>
+
+  <!-- 🎶 Música -->
+  <audio id="musica" src="/public/wwd.mp3juice.blog - JVKE - this is what falling in love feels like (Leon Leiden Remix) Official Lyric Video (320 KBps).mp3" autoplay loop></audio>
+
+  <!-- 🌹 Encabezado -->
+  <div class="encabezado">
+    <h1 class="titulo">Nuestra historia</h1>
+    <h2 class="subtitulo">Un encuentro inesperado</h2>
+    <p class="fecha">14 de septiembre 2023</p>
+  </div>
+
+  <!-- 📝 Texto sincronizado -->
+  <div class="letra"></div>
+
+  <!-- 💌 Botón -->
+  <button class="boton" onclick="mostrarCarta()">Abrir carta 💌</button>
+
+  <!-- 💬 Carta -->
+  <div class="carta" id="carta">
+    <p>Querida,</p>
+    <p>
+      Desde el primer instante en que te conocí sentí una conexión única, como si hubiera encontrado la pieza que faltaba en mi vida. Tu mirada me hipnotizaba y tu sonrisa, tan bonita y resplandeciente, era equivalente a una luz de esperanza.
+
+Aunque mis días eran simples y bruscos, tú lograste marcar la diferencia y hacerlos mejores. Eres la mujer que siempre amaré, porque en el tiempo que estuvimos juntos conocí tus lados buenos y malos; ver tu pasado fue como contemplar una flor única en su especie, una flor cuyo valor muchos no supieron reconocer, a pesar de los esfuerzos que hacías para embellecer el mundo.
+
+Incluso estando lastimada, en ti vi un corazón hermoso que merece ser amado como nadie. Me hace feliz saber que puedo acompañarte en tus momentos más difíciles, como tu pareja. Quiero que sepas que de mí nunca escucharás un “te mereces alguien mejor”, porque estoy dispuesto a mejorar todo lo que sea necesario por ti y haría cualquier cosa, hasta lo inimaginable, para verte feliz.
+
+Vales cada segundo de espera, cada esfuerzo, cada intento, cada lucha, cada obstáculo. Te amo y quiero que siempre recuerdes que estaré ahí para ti, siempre.
+      <!-- (tu texto completo) -->
+    </p>
+    <button class="cerrar" onclick="cerrarCarta()">Cerrar</button>
+  </div>
+
+  <script src="/public/java.js"></script>
+</body>
+</html>
